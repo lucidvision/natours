@@ -1,0 +1,42 @@
+.input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rbga(255, 255, 255, .5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all .3s;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.input:focus:invalid {
+  border-bottom: 3px solid var(--color-secondary-dark);
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--color-grey-dark-2)
+}
+
+.input:placeholder-shown + .input__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.input__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s;
+}
