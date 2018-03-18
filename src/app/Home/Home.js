@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { WOW } from 'wowjs'
 import {
   Button,
   ButtonText,
@@ -72,12 +73,15 @@ const story2 = {
 }
 
 class Home extends Component {
+  componentDidMount () {
+    new WOW().init()
+  }
   render () {
     return (
       <Fragment>
         <div>
           <input type='checkbox' className='navigation__checkbox' id='navi-toggle' />
-          <label for='navi-toggle' className='navigation__button'>
+          <label htmlFor='navi-toggle' className='navigation__button'>
             <span className='navigation__icon'>&nbsp;</span>
           </label>
           <div className='navigation__background'>&nbsp;</div>
@@ -109,7 +113,7 @@ class Home extends Component {
               <HeadingSecondary text='Exciting tours for adventurous people' />
             </div>
             <div className='row'>
-              <div className='col-1-of-2'>
+              <div className='col-1-of-2 wow slideInLeft'>
                 <HeadingTertiary className='u-margin-bottom-small' text={'You\'re going to fall in love with nature'} />
                 <p className='paragraph'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
@@ -121,7 +125,7 @@ class Home extends Component {
                 </p>
                 <ButtonText href='#' text='Learn more &rarr;' />
               </div>
-              <div className='col-1-of-2'>
+              <div className='col-1-of-2 wow slideInRight'>
                 <Composition />
               </div>
             </div>
@@ -129,25 +133,25 @@ class Home extends Component {
 
           <section className='section-features'>
             <div className='row'>
-              <div className='col-1-of-4'>
+              <div className='col-1-of-4 wow slideInUp'>
                 <FeatureBox
                   header='Explore the world'
                   icon='icon-basic-world'
                   text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.' />
               </div>
-              <div className='col-1-of-4'>
+              <div className='col-1-of-4 wow slideInDown'>
                 <FeatureBox
                   header='Meet nature'
                   icon='icon-basic-compass'
                   text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.' />
               </div>
-              <div className='col-1-of-4'>
+              <div className='col-1-of-4 wow slideInUp'>
                 <FeatureBox
                   header='Find your way'
                   icon='icon-basic-map'
                   text='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.' />
               </div>
-              <div className='col-1-of-4'>
+              <div className='col-1-of-4 wow slideInDown'>
                 <FeatureBox
                   header='Live a healthier life'
                   icon='icon-basic-heart'
@@ -161,13 +165,13 @@ class Home extends Component {
               <HeadingSecondary text='Most popular tours' />
             </div>
             <div className='row'>
-              <div className='col-1-of-3'>
+              <div className='col-1-of-3 wow flipInY'>
                 <Card {...card1} />
               </div>
-              <div className='col-1-of-3'>
+              <div className='col-1-of-3 wow flipInY'>
                 <Card {...card2} />
               </div>
-              <div className='col-1-of-3'>
+              <div className='col-1-of-3 wow flipInY'>
                 <Card {...card3} />
               </div>
             </div>
@@ -181,10 +185,10 @@ class Home extends Component {
             <div className='u-center-text u-margin-bottom-big'>
               <HeadingSecondary text='We make people genuinely happy' />
             </div>
-            <div className='row'>
+            <div className='row wow tada'>
               <Story {...story1} />
             </div>
-            <div className='row'>
+            <div className='row wow tada'>
               <Story {...story2} />
             </div>
             <div className='u-center-text u-margin-top-huge'>
@@ -193,29 +197,29 @@ class Home extends Component {
           </section>
 
           <section className='section-book'>
-            <div className='row'>
+            <div className='row wow jello'>
               <FormBook />
             </div>
           </section>
         </main>
-        <footer class='footer'>
-          <div class='footer__logo-box'>
+        <footer className='footer'>
+          <div className='footer__logo-box'>
             <LogoLarge />
           </div>
-          <div class='row'>
-            <div class='col-1-of-2'>
-              <div class='footer__navigation'>
-                <ul class='footer__list'>
-                  <li class='footer__item'><a href='#' class='footer__link'>Company</a></li>
-                  <li class='footer__item'><a href='#' class='footer__link'>Contact us</a></li>
-                  <li class='footer__item'><a href='#' class='footer__link'>Carrers</a></li>
-                  <li class='footer__item'><a href='#' class='footer__link'>Privacy policy</a></li>
-                  <li class='footer__item'><a href='#' class='footer__link'>Terms</a></li>
+          <div className='row'>
+            <div className='col-1-of-2'>
+              <div className='footer__navigation'>
+                <ul className='footer__list'>
+                  <li className='footer__item'><a href='#' className='footer__link'>Company</a></li>
+                  <li className='footer__item'><a href='#' className='footer__link'>Contact us</a></li>
+                  <li className='footer__item'><a href='#' className='footer__link'>Carrers</a></li>
+                  <li className='footer__item'><a href='#' className='footer__link'>Privacy policy</a></li>
+                  <li className='footer__item'><a href='#' className='footer__link'>Terms</a></li>
                 </ul>
               </div>
             </div>
-            <div class='col-1-of-2'>
-              <p class='footer__copyright'>
+            <div className='col-1-of-2'>
+              <p className='footer__copyright'>
                 You are 100% allowed to use this webpage for both personal
                 and commercial use, but NOT to claim it as your own design.
                 A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!

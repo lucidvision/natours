@@ -16,7 +16,7 @@ export default function Input (props) {
   return (
     <div>
       <input type='text' className='input' placeholder={props.label} id={props.id} required />
-      <label for={props.id} className='input__label'>{props.label}</label>
+      <label htmlFor={props.id} className='input__label'>{props.label}</label>
     </div>
   )
 }
