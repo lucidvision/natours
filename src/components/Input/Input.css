@@ -40,3 +40,9 @@
   display: block;
   transition: all .3s;
 }
+
+@media only screen and (max-width: 56.25em) {
+  .input {
+    width: 100%;
+  }
+}
