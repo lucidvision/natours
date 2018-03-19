@@ -191,11 +191,11 @@
   margin-top: -20vh;
 }
 
-.paragraph {
+.section-about__paragraph {
   font-size: var(--default-font-size);
 }
 
-.paragraph:not(:last-child) {
+.section-about__paragraph:not(:last-child) {
   margin-bottom: 3rem;
 }
 

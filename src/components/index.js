@@ -10,6 +10,7 @@ import HeadingTertiary from './Heading/HeadingTertiary'
 import Input from './Input/Input'
 import LogoLarge from './Logo/LogoLarge'
 import LogoSmall from './Logo/LogoSmall'
+import Popup from './Popup/Popup'
 import Radio from './Radio/Radio'
 import Story from './Story/Story'
 import Video from './Video/Video'
@@ -27,6 +28,7 @@ export {
   Input,
   LogoLarge,
   LogoSmall,
+  Popup,
   Radio,
   Story,
   Video

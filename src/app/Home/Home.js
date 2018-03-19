@@ -12,6 +12,7 @@ import {
   HeadingTertiary,
   LogoLarge,
   LogoSmall,
+  Popup,
   Story,
   Video
 } from 'components'
@@ -115,12 +116,12 @@ class Home extends Component {
             <div className='row'>
               <div className='col-1-of-2 wow slideInLeft'>
                 <HeadingTertiary className='u-margin-bottom-small' text={'You\'re going to fall in love with nature'} />
-                <p className='paragraph'>
+                <p className='section-about__paragraph'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
                   ducimus quam nisi exercitationem omnis earum qui.
                 </p>
                 <HeadingTertiary className='u-margin-bottom-small' text='Live adventures like you never have before' />
-                <p className='paragraph'>
+                <p className='section-about__paragraph'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
                 </p>
                 <ButtonText href='#' text='Learn more &rarr;' />
@@ -227,6 +228,8 @@ class Home extends Component {
             </div>
           </div>
         </footer>
+
+        <Popup />
       </Fragment>
     )
   }
